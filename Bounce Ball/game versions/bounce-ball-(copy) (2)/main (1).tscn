@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://cn3bax4jxiks2"]
+
+[ext_resource type="Texture2D" uid="uid://drlrw6kxu7fxx" path="res://assets/Boost.png" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://c3wnmjcljpf2e" path="res://Scripts/main.gd" id="1_lquwl"]
+[ext_resource type="Texture2D" uid="uid://2p4b0ddf5dqf" path="res://assets/Booster.png" id="2_7mycd"]
+[ext_resource type="Script" uid="uid://b4welq8qms2xu" path="res://Scripts/cannon.gd" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dfetgkomqta22" path="res://assets/rectangle.png" id="4_272bh"]
+[ext_resource type="Script" uid="uid://sxbu2aivhrkf" path="res://spikes.gd" id="6_5vw27"]
+[ext_resource type="Texture2D" uid="uid://dendtn8tidt21" path="res://assets/YELLOW.png" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://ywqscswokui2" path="res://assets/BLUE.png" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://dvffhig1hrsy2" path="res://Scripts/scoreers.gd" id="8_kek77"]
+[ext_resource type="AudioStream" uid="uid://dilxc3lso1m3n" path="res://Contact Sound Pinball.mp3" id="10_4c57u"]
+[ext_resource type="AudioStream" uid="uid://cfxiyuumx8gry" path="res://Conac SFX blue.mp3" id="11_efxa6"]
+[ext_resource type="AudioStream" uid="uid://ba80uwq3qv8dl" path="res://CNON BOOM BOOM.mp3" id="12_dg77c"]
+[ext_resource type="AudioStream" uid="uid://bkqlvt0x2c1r1" path="res://Conac SFX wall.mp3" id="13_ycdy4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_272bh"]
+friction = 0.0
+bounce = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqdht"]
+radius = 125.035995
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uqdht"]
+distance = -386.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdht"]
+size = Vector2(70, 1042)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_mtfby"]
+points = PackedVector2Array(41, 21, 2, -42, -35, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtfby"]
+size = Vector2(187, 37)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqdht"]
+font_size = 24
+
+[node name="Node2D" type="Node2D" unique_id=1327495091]
+script = ExtResource("1_lquwl")
+
+[node name="Control" type="Control" parent="." unique_id=415111017]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1247400613]
+layout_mode = 0
+offset_left = 545.0
+offset_top = -217.0
+offset_right = 842.0
+offset_bottom = -167.0
+rotation = 1.5707964
+fill_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=673221695]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2102314324]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1905985886]
+position = Vector2(4, 290)
+texture = ExtResource("2_7mycd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Sprite2D" unique_id=1186773948]
+physics_material_override = SubResource("PhysicsMaterial_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Sprite2D/StaticBody2D" unique_id=817950097]
+visible = false
+position = Vector2(6, 76)
+shape = SubResource("CircleShape2D_uqdht")
+
+[node name="cannon" type="Sprite2D" parent="." unique_id=1389275228]
+position = Vector2(-495, -197)
+rotation = 3.1415927
+scale = Vector2(0.45944574, 0.42255417)
+texture = ExtResource("1_1bvp3")
+script = ExtResource("3_7mycd")
+
+[node name="Node2D" type="Node2D" parent="cannon" unique_id=55040647]
+position = Vector2(8.706144, 33.131847)
+
+[node name="Sprite2D" type="Sprite2D" parent="cannon/Node2D" unique_id=874748000]
+position = Vector2(-2.7656555e-05, 0)
+scale = Vector2(0.67023313, 0.8554898)
+texture = ExtResource("4_272bh")
+offset = Vector2(0, 50)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1980393780]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1631660717]
+shape = SubResource("WorldBoundaryShape2D_uqdht")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=697791426]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1411226838]
+position = Vector2(-592, -39)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1362062941]
+position = Vector2(580, -14)
+shape = SubResource("RectangleShape2D_uqdht")
+
+[node name="spikes" type="Node2D" parent="." unique_id=686511852]
+script = ExtResource("6_5vw27")
+
+[node name="Yellow2" type="Sprite2D" parent="spikes" unique_id=807580387]
+position = Vector2(-301, 234)
+texture = ExtResource("6_272bh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="spikes/Yellow2" unique_id=687979694]
+position = Vector2(-1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow2/StaticBody2D2" unique_id=1999198655]
+position = Vector2(-3, 3)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="spike_area" type="Area2D" parent="spikes/Yellow2" unique_id=1144859258]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow2/spike_area" unique_id=1585935384]
+position = Vector2(-3, 3)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="Yellow" type="Sprite2D" parent="spikes" unique_id=493275596]
+position = Vector2(-478, 156)
+texture = ExtResource("6_272bh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="spikes/Yellow" unique_id=112145325]
+position = Vector2(478, -156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow/StaticBody2D2" unique_id=1708250922]
+position = Vector2(-482, 160)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="spike_area2" type="Area2D" parent="spikes/Yellow" unique_id=1978785522]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow/spike_area2" unique_id=1603482558]
+position = Vector2(-5, 2)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="Yellow3" type="Sprite2D" parent="spikes" unique_id=1749263414]
+position = Vector2(292, 246)
+texture = ExtResource("6_272bh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="spikes/Yellow3" unique_id=881777434]
+position = Vector2(-1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow3/StaticBody2D2" unique_id=388985224]
+position = Vector2(-3, 3)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="spike_area3" type="Area2D" parent="spikes/Yellow3" unique_id=1645156653]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow3/spike_area3" unique_id=601201641]
+position = Vector2(-7, 7)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="Yellow4" type="Sprite2D" parent="spikes" unique_id=1669880599]
+position = Vector2(481, 162)
+texture = ExtResource("6_272bh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="spikes/Yellow4" unique_id=1723444090]
+position = Vector2(478, -156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow4/StaticBody2D2" unique_id=428654506]
+position = Vector2(-482, 160)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="spike_area4" type="Area2D" parent="spikes/Yellow4" unique_id=419500462]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Yellow4/spike_area4" unique_id=745457007]
+position = Vector2(-3, 4)
+shape = SubResource("ConvexPolygonShape2D_mtfby")
+
+[node name="scoreers" type="Node2D" parent="." unique_id=1696127051]
+script = ExtResource("8_kek77")
+
+[node name="score_area" type="Area2D" parent="scoreers" unique_id=1100372275]
+position = Vector2(47.023468, 0)
+scale = Vector2(1.1015625, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scoreers/score_area" unique_id=1322242678]
+position = Vector2(-329, -308)
+shape = SubResource("RectangleShape2D_mtfby")
+
+[node name="Blue" type="Sprite2D" parent="scoreers/score_area" unique_id=1489300704]
+position = Vector2(-335, -311.99997)
+scale = Vector2(1.939394, 0.99999994)
+texture = ExtResource("8_5vw27")
+
+[node name="Label" type="Label" parent="scoreers/score_area" unique_id=1924951269]
+offset_left = -348.61703
+offset_top = -325.0
+offset_right = -290.51773
+offset_bottom = -291.0
+text = "+20"
+label_settings = SubResource("LabelSettings_uqdht")
+
+[node name="score_area2" type="Area2D" parent="scoreers" unique_id=1236119694]
+position = Vector2(717, 0)
+scale = Vector2(1.21344, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scoreers/score_area2" unique_id=335689721]
+position = Vector2(-329, -308)
+shape = SubResource("RectangleShape2D_mtfby")
+
+[node name="Blue2" type="Sprite2D" parent="scoreers/score_area2" unique_id=518591692]
+position = Vector2(-335, -311.99997)
+scale = Vector2(1.939394, 0.99999994)
+texture = ExtResource("8_5vw27")
+
+[node name="Label" type="Label" parent="scoreers/score_area2" unique_id=1665725698]
+offset_left = -348.61703
+offset_top = -325.0
+offset_right = -290.51773
+offset_bottom = -291.0
+text = "+20"
+label_settings = SubResource("LabelSettings_uqdht")
+
+[node name="SFX_CONTACT_SPK" type="AudioStreamPlayer2D" parent="." unique_id=820983846]
+stream = ExtResource("10_4c57u")
+
+[node name="SFX_CONTACT_SCR" type="AudioStreamPlayer2D" parent="." unique_id=186320891]
+stream = ExtResource("11_efxa6")
+
+[node name="SFX_PROJEC_CNN" type="AudioStreamPlayer2D" parent="." unique_id=904991934]
+stream = ExtResource("12_dg77c")
+
+[node name="SFX_CONTACT_WLL" type="AudioStreamPlayer2D" parent="." unique_id=789774677]
+stream = ExtResource("13_ycdy4")
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="body_entered" from="spikes/Yellow2/spike_area" to="spikes" method="_on_spike_area_body_entered"]
+[connection signal="body_entered" from="spikes/Yellow/spike_area2" to="spikes" method="_on_spike_area_2_body_entered"]
+[connection signal="body_entered" from="spikes/Yellow3/spike_area3" to="spikes" method="_on_spike_area_3_body_entered"]
+[connection signal="body_entered" from="spikes/Yellow4/spike_area4" to="spikes" method="_on_spike_area_4_body_entered"]
+[connection signal="body_entered" from="scoreers/score_area" to="scoreers" method="_on_score_area_body_entered"]
+[connection signal="body_entered" from="scoreers/score_area2" to="scoreers" method="_on_score_area_2_body_entered"]

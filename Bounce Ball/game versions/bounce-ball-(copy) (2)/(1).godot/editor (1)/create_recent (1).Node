@@ -1,0 +1,13 @@
+AudioStreamPlayer2D
+Node2D
+Label
+Area2D
+CollisionShape2D
+CollisionPolygon2D
+StaticBody2D
+Sprite2D
+Polygon2D
+RigidBody2D
+Camera2D
+ProgressBar
+Control

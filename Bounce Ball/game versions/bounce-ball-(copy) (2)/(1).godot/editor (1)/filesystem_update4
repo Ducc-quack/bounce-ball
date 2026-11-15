@@ -1,0 +1,5 @@
+res://main.tscn
+res://Scripts/scoreers.gd
+res://spikes.gd
+res://Scripts/cannon.gd
+res://Scripts/wall_noise.gd

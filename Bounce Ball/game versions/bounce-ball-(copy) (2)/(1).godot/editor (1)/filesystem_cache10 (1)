@@ -1,0 +1,28 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1794656288
+ball.tscn::PackedScene::8596138734263595101::1794560866::0::1::::<><><>0<>0<><>::uid://t3g3hln44xpt::::res://Scripts/ball.gd<>uid://ber1cv1g62j7h::::res://assets/Ball (1).png
+CNON BOOM BOOM.mp3::AudioStreamMP3::2456099971799343901::1794654233::1794654268::1::::<><><>0<>0<>a1425baefe64217f29e2b89605d77fc3<>res://.godot/imported/CNON BOOM BOOM.mp3-434cb78f618bb8f44751c1887cc63977.mp3str::
+Conac SFX blue.mp3::AudioStreamMP3::5171795950855944682::1794653682::1794653759::1::::<><><>0<>0<>bec0c7df701d83c7bf3c750e4a85ad69<>res://.godot/imported/Conac SFX blue.mp3-d1b20d3921c1c86fcb5539a8c0676dc7.mp3str::
+Conac SFX wall.mp3::AudioStreamMP3::3122045590375783460::1794656260::1794656288::1::::<><><>0<>0<>e35e60edd9f761e99d0f91ace2d51df4<>res://.godot/imported/Conac SFX wall.mp3-c266aaec0e1e0989d137c0b16e60076e.mp3str::
+Contact Sound Pinball.mp3::AudioStreamMP3::7744882506383893925::1794651909::1794651952::1::::<><><>0<>0<>a9f96a945d64aa942062f55ed950c7f0<>res://.godot/imported/Contact Sound Pinball.mp3-26e54464b2906251fc2dc256c99da421.mp3str::
+main.tscn::PackedScene::5743160882063425847::1794655997::0::1::::<><><>0<>0<><>::uid://drlrw6kxu7fxx::::res://assets/Boost.png<>uid://c3wnmjcljpf2e::::res://Scripts/main.gd<>uid://2p4b0ddf5dqf::::res://assets/Booster.png<>uid://b4welq8qms2xu::::res://Scripts/cannon.gd<>uid://dfetgkomqta22::::res://assets/rectangle.png<>uid://sxbu2aivhrkf::::res://spikes.gd<>uid://dendtn8tidt21::::res://assets/YELLOW.png<>uid://ywqscswokui2::::res://assets/BLUE.png<>uid://dvffhig1hrsy2::::res://Scripts/scoreers.gd<>uid://dilxc3lso1m3n::::res://Contact Sound Pinball.mp3<>uid://cfxiyuumx8gry::::res://Conac SFX blue.mp3<>uid://ba80uwq3qv8dl::::res://CNON BOOM BOOM.mp3
+spikes.gd::GDScript::1310977725221117605::1794653919::0::1::::<>Node2D<><>0<>0<><>::
+sprite_2d.gd::GDScript::7698372199312830915::1794560866::0::1::::<>Sprite2D<><>0<>0<><>::
+::res://assets/::1794649737
+Ball (1).png::CompressedTexture2D::2703853836934364147::1794560868::1794560868::1::::<><><>0<>0<>8903a0d3803caef8f634afe12e2ce47f<>res://.godot/imported/Ball (1).png-11e5ac70cf880533dc6b39fbc068b410.ctex::
+Ball.png::CompressedTexture2D::3147256567379682022::1794560868::1794560868::1::::<><><>0<>0<>4e18ef670125054fff4ff2b2acfad92d<>res://.godot/imported/Ball.png-6366ecb65c8c630ad766823a9365d76e.ctex::
+BLUE.png::CompressedTexture2D::1730952307948528107::1794560868::1794560868::1::::<><><>0<>0<>53beeef73e29643213a010f4df28dd88<>res://.godot/imported/BLUE.png-0138741a46e18fa20d12af70c85c3b6d.ctex::
+Boost.png::CompressedTexture2D::8376253669308353241::1794560868::1794560868::1::::<><><>0<>0<>d47287c08dc771d208c46b67a5006ea2<>res://.godot/imported/Boost.png-935dcb96149c9b7acc52f6feed584bd6.ctex::
+Booster.png::CompressedTexture2D::1927828340984241297::1794560868::1794560868::1::::<><><>0<>0<>5b714d117941da84fd1106d9177e7855<>res://.godot/imported/Booster.png-11275a438f931a5ecb232e1ea6db9d9a.ctex::
+rectangle.png::CompressedTexture2D::7519628665339813833::1794560868::1794560868::1::::<><><>0<>0<>c1993b20e2f1e7e0f21afa7f6303b280<>res://.godot/imported/rectangle.png-d1ee9de140957abe1c5e54e5accfca55.ctex::
+YELLOW.png::CompressedTexture2D::7467071152152904372::1794560868::1794560868::1::::<><><>0<>0<>76442e43d30e83d30371d85d1546ce7a<>res://.godot/imported/YELLOW.png-cc4c40986bbe334f9fe143654b8c8a4c.ctex::
+YELLOWLIT.png::CompressedTexture2D::6134431315546581896::1794560868::1794560868::1::::<><><>0<>0<>7a0fb1d11dff69463fe9ae23f87ae008<>res://.godot/imported/YELLOWLIT.png-b4793ae34c93863dd9e9d9e0ddece411.ctex::
+::res://Scenes/::1794568950
+::res://Scripts/::1794656272
+ball.gd::GDScript::1391805295709105669::1794560868::0::1::::<>RigidBody2D<><>0<>0<><>::
+cannon.gd::GDScript::4467576863585265310::1794654849::0::1::::<>Sprite2D<><>0<>0<><>::
+EventBus.gd::GDScript::8815279104820517317::1794560868::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript::6784356526585419798::1794560868::0::1::::<>Node2D<><>0<>0<><>::
+scoreers.gd::GDScript::8643866172416441547::1794653843::0::1::::<>Node2D<><>0<>0<><>::
+spikes.gd::GDScript::866111134486322954::1794560868::0::1::::<>Node2D<><>0<>0<><>::
+wall_noise.gd::GDScript::6621010624312596897::1794656075::0::1::::<>Node<><>0<>0<><>::
